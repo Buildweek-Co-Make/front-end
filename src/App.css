@@ -4,6 +4,9 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  
   
 }
 
@@ -20,14 +23,19 @@
 
 .App-header {
   background-color: #1f1f1f;
-  
+  max-width: fit-content;
   display: flex;
   flex-direction: column;
-
+  border-radius: 15% 15% ;
+  padding:3%;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: #ffd000;
+}
+
+.symbol {
+  font-size:1rem;
 }
 
 .App-link {
