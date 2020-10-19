@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
 import Signup from "./components/Signup";
+import Login from "./components/Login";
 import './App.css';
 
 const App = () => {
@@ -9,9 +10,20 @@ const App = () => {
       <header className="App-header">
         <h1>Co-Make <span className="symbol">&copy;</span></h1>
         <p>Make your world the way it should be!</p>
+
+        <nav>
+          <Link to="/signup"> 
+            Sign Up
+          </Link>
+          <Link to="/login">
+            Log In
+          </Link>
+
+        </nav>
       </header>
 
       <Route path="/signup" component={Signup}/>
+      <Route path="/login" component={Login}/>
       {/* <div>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae metus commodo ligula dignissim pretium. In scelerisque, tellus et dapibus mattis, purus diam bibendum orci, non elementum justo ante a urna. Vivamus faucibus dictum turpis sed accumsan. Maecenas aliquet tellus quis pretium aliquam. Ut tempor mauris eget iaculis laoreet. Integer eget pretium ipsum. Nulla sed nulla justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed velit nisi, condimentum nec sem non, tincidunt tempus massa.

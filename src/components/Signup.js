@@ -1,14 +1,53 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 
-function Signup() {
+function Signup(props) {
+    
 
+    const history = useHistory();
+
+    const routeToLogin = () => {
+        history.push("./login")
+    }
+    // manage state for form inputs
+
+
+    // control submit option if error
+
+
+    // manage state for errors
+
+
+    // functions
+    // inline validation (key:value)
+
+
+    // onSubmit function
+
+
+    // onChange function
+
+
+    // schema for yup form validation
+
+
+    // useEffect  
 
 
     return (
         <div className="form-cont">
+            <div className="wrongform?">
+                <p>
+                   Already A Co-Maker?
+               </p>
+               <button 
+                className="wrongButton"
+                onClick={routeToLogin}>
+                    Log In
+               </button>
+            </div>
             <form 
-                onSubmit={formSubmit}
+                // onSubmit={signSubmit}
                 className="signup-form">
                 <label htmlFor="name">
                     Name:
