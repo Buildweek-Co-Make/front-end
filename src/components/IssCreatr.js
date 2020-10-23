@@ -71,6 +71,7 @@ function Creatr() {
         // })
 
         issData.push(formState);
+        alert("Your Co-Maker card was added to Dashboard");
         setFormState({
             title: "",
             city: "",

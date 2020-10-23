@@ -105,6 +105,10 @@ h1 {
 
 }
 
+.login-form, .signup-form, .iss-form label {
+  font-family: 'Black Ops One', cursive;
+}
+
 .signup-form {
   display: flex;
   flex-direction: column;
@@ -133,6 +137,10 @@ h1 {
 .iss-form .add-button {
   max-width: fit-content;
   margin-top: 6%;
+}
+
+.iss-form label {
+  color: #ffd000;
 }
 
 .form-buttons {
