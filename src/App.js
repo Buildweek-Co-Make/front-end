@@ -11,11 +11,15 @@ const App = () => {
         <h1>Co-Make <span className="symbol">&copy;</span></h1>
         <p>Make your world the way it should be!</p>
 
-        <nav>
-          <Link to="/signup"> 
+        <nav className="main-nav">
+          <Link 
+            to="/signup"
+            className="App-link"> 
             Sign Up
           </Link>
-          <Link to="/login">
+          <Link 
+            to="/login"
+            className="App-link">
             Log In
           </Link>
 
