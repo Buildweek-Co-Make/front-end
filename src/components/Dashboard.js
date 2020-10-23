@@ -37,9 +37,11 @@ function Dashboard() {
                     Help us Co-Make
                 </p>
             </div>
+            <div className="card-cont">
             {issues.map(item => {
                 return <IssCard props={item} />
             },0)}
+            </div>
 
             <button className="to-creatr-button"
                 onClick={routeToCreatr}

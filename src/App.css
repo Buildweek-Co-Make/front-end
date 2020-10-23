@@ -42,6 +42,7 @@
 
 h1 {
   font-size: 2rem;
+  font-family: 'Black Ops One', cursive;
 }
 
 /* .txt-cont {
@@ -141,4 +142,25 @@ h1 {
 .form-buttons:disabled {
   opacity: .5;
 
+}
+
+/* dashboard styles */
+
+.dash-header p {
+  font-family: 'Black Ops One', cursive;
+  font-size: 2rem;
+  color: orange;
+}
+
+.card-cont {
+  display: flex;
+  flex-flow: row wrap;
+  width: 90%;
+  padding: 2%;
+  justify-content: center;
+}
+
+.to-creatr-button {
+  margin-bottom: 8%;
+  font-size: 1.5rem;
 }
