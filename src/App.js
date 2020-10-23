@@ -2,16 +2,25 @@ import React from 'react';
 import { Route, Link } from 'react-router-dom';
 import Signup from "./components/Signup";
 import Login from "./components/Login";
+import Dashboard from "./components/Dashboard";
+import Creatr from "./components/IssCreatr";
 import './App.css';
 
 const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Co-Make <span className="symbol">&copy;</span></h1>
-        <p>Make your world the way it should be!</p>
+        <div className="txt-cont">
+          <h1>Co-Make <span className="symbol">&copy;</span></h1>
+          <p>Make your world the way it should be!</p>
+        </div>
 
         <nav className="main-nav">
+        <Link 
+            to="/dashboard"
+            className="App-link">
+            Dashboard
+          </Link>
           <Link 
             to="/signup"
             className="App-link"> 
@@ -28,6 +37,8 @@ const App = () => {
 
       <Route path="/signup" component={Signup}/>
       <Route path="/login" component={Login}/>
+      <Route path="/dashboard" component={Dashboard}/>
+      <Route path="/comake" component={Creatr} />
       {/* <div>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae metus commodo ligula dignissim pretium. In scelerisque, tellus et dapibus mattis, purus diam bibendum orci, non elementum justo ante a urna. Vivamus faucibus dictum turpis sed accumsan. Maecenas aliquet tellus quis pretium aliquam. Ut tempor mauris eget iaculis laoreet. Integer eget pretium ipsum. Nulla sed nulla justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed velit nisi, condimentum nec sem non, tincidunt tempus massa.

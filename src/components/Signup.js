@@ -6,7 +6,7 @@ import * as yup from "yup";
 
 function Signup(props) {
     
-    console.log(props);
+    // console.log(props);
 
     const history = useHistory();
 
@@ -24,6 +24,13 @@ function Signup(props) {
          state: "",
          terms: ""   
     })
+
+    // manage state for address inputs ?
+    // const [addrState, setAddrState] = useState({
+    //     zipcode: "",
+    //     city: "",
+    //     state: ""
+    // })
 
     // control submit option if error
     const [buttonDis, setButtonDis] = useState(true);
@@ -59,7 +66,7 @@ function Signup(props) {
             })
     }
 
-    // neep endpoints from backend here e.g. https://reqres.in/api/users
+    // need endpoints from backend here? e.g. https://reqres.in/api/users
     // onSubmit function
     const signSubmit = (e) => {
         e.preventDefault();
@@ -95,6 +102,14 @@ function Signup(props) {
         
     }
 
+    // ZIPCODE AS PARAM AUTO FILL FOR CITY & STATE INPUTS
+    // zip API key L7W5BSj2Z81KZRuosrCXOa3ATP4htgus0ehQdrS8vobSgEynbFslBuqUxOeAracF
+    // onChange for zipcode
+    // zonst zipCall = (e) => {
+    //     e.persist();
+    //     const 
+    // }
+
     // schema for yup form validation
     const formSchema = yup.object().shape({
         fname: yup.string().min(5).required("Please enter first name"),
@@ -118,7 +133,7 @@ function Signup(props) {
 
     return (
         <div className="form-cont">
-            <div className="wrongform?">
+            <div className="wrong-form">
                 <p>
                    Already A Co-Maker?
                </p>

@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 import * as yup from "yup";
 
 function Login(props) {
-    console.log(props);
+    // console.log(props);
 
     // const history = useHistory();
     // manage state for form inputs
@@ -48,12 +48,12 @@ function Login(props) {
     };
 
     // onSubmit 
-    const formSubmit = (e) => {
+    const logSubmit = (e) => {
         e.preventDefault();
 
         Axios.post("https://reqres.in/api/users", formState)
         .then( (res) => {
-            console.log(res)
+            // console.log(res)
             setFormState({
                 username: "",
                 password: ""
@@ -83,6 +83,16 @@ function Login(props) {
         username: yup.string().min(5).required(),
         password: yup.string().min(8).required()
     })
+
+    // useEffect
+    useEffect( () => {
+        formSchema.isValid(formState).then( (valid) => {
+            console.log("is my form valid?", valid);
+            setButtonDis(!valid)
+        });
+    }, [formState]);
+
+
     // use history prop for button
     const history = useHistory();
 
@@ -94,7 +104,7 @@ function Login(props) {
 
         
        <div className="form-cont">
-           <div className="wrongform?">
+           <div className="wrong-form">
                <p>
                    New to Co-Make?
                </p>
@@ -105,7 +115,7 @@ function Login(props) {
                </button>
            </div>
             <form 
-                // onSubmit={logSubmit}
+                onSubmit={logSubmit}
                 className="login-form"
             >
             <label 
@@ -116,8 +126,11 @@ function Login(props) {
                     id="username"
                     type="text"
                     name="username"
+                    autoComplete="username"
+                    onChange={inputChange}
+                    value={formState.username}
                 />
-                {errors.username.length > 0 ? <p className="error">{errors.name}</p> : null}
+                {errors.username.length > 0 ? <p className="error">{errors.username}</p> : null}
             </label>
 
             <label
@@ -128,8 +141,11 @@ function Login(props) {
                     id="password"
                     type="password"
                     name="password"
+                    autoComplete="current-password"
+                    onChange={inputChange}
+                    value={formState.password}
                 />
-                {errors.password.length > 0 ? <p className="error">{errors.name}</p> : null}
+                {errors.password.length > 0 ? <p className="error">{errors.password}</p> : null}
             </label>
             <br/>
             <button
