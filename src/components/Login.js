@@ -51,6 +51,7 @@ function Login(props) {
     const logSubmit = (e) => {
         e.preventDefault();
 
+        console.log(formState);
         Axios.post("https://reqres.in/api/users", formState)
         .then( (res) => {
             // console.log(res)
@@ -104,15 +105,10 @@ function Login(props) {
 
         
        <div className="form-cont">
-           <div className="wrong-form">
+           <div className="form-title">
                <p>
-                   New to Co-Make?
+                   Log-In To Co-Make
                </p>
-               <button 
-                className="wrongButton"
-                onClick={routeToSignup}>
-                    Sign Up
-               </button>
            </div>
             <form 
                 onSubmit={logSubmit}
@@ -155,6 +151,17 @@ function Login(props) {
             >
                 Log-In
             </button>
+
+            <div className="wrong-form">
+               <p>
+                   New to Co-Make?
+               </p>
+               <button 
+                className="wrongButton"
+                onClick={routeToSignup}>
+                    Sign Up
+               </button>
+           </div>
 
             </form>
         </div>

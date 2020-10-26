@@ -71,6 +71,8 @@ function Signup(props) {
     const signSubmit = (e) => {
         e.preventDefault();
 
+        console.log(formState);
+
         Axios.post("https://reqres.in/api/users", formState)
         .then( (res) => {
             console.log(res)
@@ -116,7 +118,7 @@ function Signup(props) {
         lname: yup.string().min(5).required("Please enter last name"),
         username: yup.string().min(5).required("Please enter a new username"),
         email: yup.string().email().required(),
-        zipcode: yup.string().max(5).required(),
+        zipcode: yup.string().min(5).max(5).required(),
         city: yup.string().required(),
         state: yup.string().max(2).required(),
         terms: yup.boolean().oneOf([true])
@@ -133,15 +135,10 @@ function Signup(props) {
 
     return (
         <div className="form-cont">
-            <div className="wrong-form">
+            <div className="form-title">
                 <p>
-                   Already A Co-Maker?
-               </p>
-               <button 
-                className="wrongButton"
-                onClick={routeToLogin}>
-                    Log In
-               </button>
+                    Become A Co-Maker!
+                </p>
             </div>
             <form 
                 onSubmit={signSubmit}
@@ -258,6 +255,17 @@ function Signup(props) {
                     disabled={buttonDis}>
                     Sign Up
                 </button>
+
+                <div className="wrong-form">
+                <p>
+                   Already A Co-Maker?
+               </p>
+               <button 
+                className="wrongButton"
+                onClick={routeToLogin}>
+                    Log In
+               </button>
+            </div>
 
                 {/* <label htmlFor="" */}
 

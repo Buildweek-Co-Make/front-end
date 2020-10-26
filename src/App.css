@@ -84,6 +84,18 @@ h1 {
 
 .wrongButton {
   margin-bottom: 3%;
+  width: 30%;
+  background-color: #e8833a ;
+  color:white;
+}
+
+.form-title p {
+  font-family: 'Black Ops One', cursive;
+  font-size: 2rem;
+  color: orange;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 
@@ -93,6 +105,9 @@ h1 {
   flex-direction: column;
   min-height: 70vh;
   justify-content: center;
+  align-items: center;
+  margin-bottom: 5%;
+  
 }
 
 .login-form {
@@ -101,6 +116,13 @@ h1 {
   justify-content: space-evenly;
   align-items: center;
   color: #ffd000;
+  background-color: #1f1f1f;
+  opacity: .60;
+  border-radius: 5% 5% ;
+  border: 2px dashed orange;
+  color: orange;
+  width: 40%;
+  padding: 5%;
 
 
 }
@@ -115,6 +137,13 @@ h1 {
   justify-content: space-evenly;
   align-items: center;
   color: #ffd000;
+  background-color: #1f1f1f;
+  opacity: .60;
+  border-radius: 5% 5% ;
+  border: 2px dashed orange;
+  color: orange;
+  width: 40%;
+  padding: 5%;  
 
 }
 
@@ -127,6 +156,13 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #1f1f1f;
+  opacity: .60;
+  border-radius: 5% 5% ;
+  border: 2px dashed orange;
+  color: orange;
+  width: 40%;
+  padding: 5%;
 
 }
 
@@ -137,14 +173,31 @@ h1 {
 .iss-form .add-button {
   max-width: fit-content;
   margin-top: 6%;
+  width: 30%;
+  background-color: #e8833a ;
+  color:white;
 }
 
 .iss-form label {
   color: #ffd000;
 }
 
+@media (max-width: 800px) {
+  .dash-cont {
+    display:flex;
+
+  }
+
+  .iss-card {
+    width: 20%;
+  }
+  
+}
+
 .form-buttons {
-  max-width: 30%;
+  width: 30%;
+  background-color: #e8833a ;
+  color:white;
 }
 
 .form-buttons:disabled {
@@ -157,7 +210,7 @@ h1 {
 .dash-header p {
   font-family: 'Black Ops One', cursive;
   font-size: 2rem;
-  color: orange;
+  color: #e8833a;
 }
 
 .card-cont {
@@ -170,5 +223,10 @@ h1 {
 
 .to-creatr-button {
   margin-bottom: 8%;
+  border-radius:.3rem ;
+  font-weight: 500;
+  padding: 1rem 2rem;
   font-size: 1.5rem;
+  background-color: #e8833a;
+  color: white;
 }

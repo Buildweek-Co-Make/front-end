@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import Axios from "axios";
 import * as yup from "yup";
 import { issData } from '../data/sampleData';
@@ -79,6 +80,7 @@ function Creatr() {
             zipcode: "",
             description: ""
         })
+        routeToDash();
 
     };
 
@@ -115,8 +117,19 @@ function Creatr() {
 
     console.log("formState", formState);
 
+    const history = useHistory();
+
+    const routeToDash = () => {
+        history.push("./dashboard")
+    }
+
     return (
         <div className="form-cont">
+            <div className="form-title">
+                <p>
+                    Add A New C0-Make Card
+                </p>
+            </div>
             <form
                 onSubmit={formSubmit}
                 className="iss-form">
